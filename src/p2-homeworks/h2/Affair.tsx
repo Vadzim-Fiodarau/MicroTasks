@@ -4,6 +4,7 @@ import s from './Affairs.module.css'
 type AffairPropsType = {
   affair: AffairType
   deleteAffairCallback: (_id: number) => void
+
 }
 
 function Affair(props: AffairPropsType) {
@@ -13,7 +14,8 @@ function Affair(props: AffairPropsType) {
 
   return (
     <div className={s.affair}>
-      {props.affair.name}
+      <div> {props.affair.name}</div>
+      <div className={s.priority}>  [{props.affair.priority}]</div>
       <button className={s.button}  onClick={deleteCallback}>X</button>
     </div>
   )
