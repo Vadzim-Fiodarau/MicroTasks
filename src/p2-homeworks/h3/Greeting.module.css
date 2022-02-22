@@ -1,0 +1,28 @@
+.input {
+    color: black;
+    margin: 0 0 0 15px;
+}
+
+.error {
+    border: 1px solid red;
+    margin: 0 0 0 15px;
+}
+
+.errorColor {
+    color: red;
+    margin: 0 0 0 15px;
+}
+
+.wrap {
+    background: olive;
+}
+
+.totalUser{
+    margin: 10px 5px ;
+    color: black;
+
+}
+
+.button{
+    margin: 10px 5px ;
+}

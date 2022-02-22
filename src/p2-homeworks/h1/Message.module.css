@@ -1,0 +1,33 @@
+.message {
+    display: flex;
+    text-align: start;
+    background-color: olive;
+    padding: 10px;
+}
+
+.img {
+    width: 50px;
+    border: solid black 1px;
+    border-radius: 50px;
+    margin: 18px 5px 0 5px;
+}
+
+.text_wrap {
+    border: solid black 2px;
+    height: 60px;
+    width: 210px;
+    padding: 5px;
+    border-radius: 10px;
+    background: black;
+}
+
+.time {
+    margin-left: 170px;
+}
+
+.angel {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle at 0 0 , black 10px, black);
+    margin:  60px 0 0 0;
+}

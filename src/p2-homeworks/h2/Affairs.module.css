@@ -1,0 +1,31 @@
+.wrap {
+    background: cadetblue;
+}
+
+.affair {
+    display: flex;
+    justify-content: space-between;
+    width: 22%;
+    margin: 5px;
+}
+
+.wrapAffair {
+    margin: 0 0 0 15px;
+}
+
+.button {
+    background: darkgreen;
+}
+
+.button:hover {
+    background: darkred;
+}
+
+.buttonFilter {
+    background: darkorange;
+    margin: 5px;
+}
+
+.buttonFilter:hover {
+    background: azure;
+}
