@@ -1,12 +1,18 @@
 .superInput {
-
+    margin: 10px;
+    background-color: darkslategrey;
+    color: azure;
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    margin: 10px;
+    border: 2px solid lime;
+    background-color: darkslategrey;
+    color: azure;
 }
 
 .error {
-    color: red;
+    height: 21px;
+    color: darkslategrey;
+    margin-left: 10px;
 }

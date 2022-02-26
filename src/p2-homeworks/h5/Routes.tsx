@@ -2,10 +2,10 @@ import React from 'react'
 import Error404 from "./pages/Error404";
 import PreJunior from './pages/PreJunior';
 
-import {Routes, Navigate} from 'react-router-dom'
+import {Routes} from 'react-router-dom'
 
 import {
- Route
+  Route
 
 } from "react-router-dom";
 import Junior from "./pages/Junior";
@@ -26,7 +26,7 @@ function Routes1() {
 
         {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR*/}
         {/*exact нужен чтоб указать полное совподение (что после '/' ничего не будет)*/}
-        <Route path={'/'} element={PATH.PRE_JUNIOR}/>}/>
+        <Route path={'/'} element={PATH.PRE_JUNIOR}/>
         <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
         <Route path={PATH.JUNIOR} element={<Junior/>}/>
         <Route path={PATH.JUNIOR_PLUS} element={ <JuniorPlus/>}/>
