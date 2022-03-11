@@ -1,0 +1,19 @@
+.btnWrap {
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.blockContent {
+    width: 200px;
+}
+
+.content {
+    display: flex;
+}
+.name {
+    margin-right: 150px;
+}
+.age {
+
+}
