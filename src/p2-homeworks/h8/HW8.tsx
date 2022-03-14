@@ -28,8 +28,10 @@ function HW8() {
 
 
   const finalPeople = people.map((p: UserType) => (
-    <div className={s.content} key={p._id}>
-      <span className={s.name}>{p.name} </span>
+    <div className={s.blockFilteredPeople}>
+      <div className={s.content} key={p._id}>
+        <span className={s.name}>{p.name} </span>
+      </div>
       <span className={s.age}>{p.age} </span>
     </div>
   ))

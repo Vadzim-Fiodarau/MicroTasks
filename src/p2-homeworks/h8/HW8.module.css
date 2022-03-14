@@ -5,7 +5,7 @@
 }
 
 .blockContent {
-    width: 200px;
+    width: 300px;
 }
 
 .content {
@@ -16,4 +16,11 @@
 }
 .age {
 
+}
+
+.blockFilteredPeople {
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
 }
