@@ -1,39 +1,38 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+  const [value1, setValue1] = useState(0)
+  const [value2, setValue2] = useState(100)
 
-    return (
-        <div>
-            <hr/>
-            homeworks 11
+  return (
+    <div>
+      <hr/>
 
-            {/*should work (должно работать)*/}
-            <div>
-                <span>{value1}</span>
-                <SuperRange
-                    // сделать так чтоб value1 изменялось
-                />
-            </div>
+      <div>
+        <span style={{marginLeft: 10}}>{value1}</span>
+        <SuperRange
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
+            setValue1(+e.currentTarget.value)
+          }}
+        />
+      </div>
 
-            <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                />
-                <span>{value2}</span>
-            </div>
+      <div>
+        <span style={{marginLeft: 10}}>{value1}</span>
+        <SuperDoubleRange
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
+            setValue1(+e.currentTarget.value)
+          }}
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
-            <hr/>
-        </div>
-    )
+        />
+        <span style={{marginLeft: 10}}>{value2}</span>
+      </div>
+
+      <hr/>
+    </div>
+  )
 }
 
 export default HW11

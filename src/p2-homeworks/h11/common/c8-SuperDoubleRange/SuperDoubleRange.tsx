@@ -1,24 +1,46 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
+import {DefaultInputPropsType} from '../c7-SuperRange/SuperRange';
 
-type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    // min, max, step, disable, ...
+
+
+type SuperDoubleRangePropsType = DefaultInputPropsType & {
+  onChangeRange?: (value: number) => void
+
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
-    {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
+  {
+    onChange,onChangeRange,
+    value, ...restProps
+  }
 ) => {
-    // сделать самому, можно подключать библиотеки
 
-    return (
-        <>
-            DoubleRange
-        </>
-    )
+  const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+    onChange && onChange(e) // сохраняем старую функциональность
+
+    onChangeRange && onChangeRange(+e.currentTarget.value)
+  }
+
+
+  return (
+    <>
+      <input
+        type={'range'}
+        onChange={onChangeCallback}
+
+
+        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+      />
+      <input
+        type={'range'}
+        onChange={onChangeCallback}
+
+
+        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+      />
+
+    </>
+  )
 }
 
 export default SuperDoubleRange
